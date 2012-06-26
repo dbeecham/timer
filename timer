@@ -1,0 +1,17 @@
+#!/usr/bin/python
+import time;
+
+begin = time.time()
+while True:
+    try:
+        now = time.time()
+        t = time.gmtime(now - begin)
+        print(" %.2d:%.2d:%.2d" % (t.tm_hour,
+                                   t.tm_min,
+                                   t.tm_sec),
+              end="")
+        time.sleep(1)
+        print("\b\b\b\b\b\b\b\b\b\b\b")
+    except KeyboardInterrupt:
+        print("")
+        break
